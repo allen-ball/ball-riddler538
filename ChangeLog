@@ -1,0 +1,36 @@
+2019-07-03  Allen D. Ball  <ball@sol.local>
+
+	* Created <solve-riddle-2019-06-28/> Ant Task.
+
+2019-07-02  Allen D. Ball  <ball@sol.local>
+
+	* src/main/java/ball/riddler538/ant/taskdefs/AbstractTask.java:
+	Initial writing: Re-factored AbstractSimulationTask.
+
+2019-03-21  Allen D. Ball  <ball@sol.local>
+
+	* <solve-express-2017-12-22/>: Use latest ball.game API.
+
+2017-12-25  Allen D. Ball  <ball@sol.local>
+
+	* Interim check-in: Created <solve-express-2017-12-22/> Ant Task.
+
+2016-10-21  Allen D. Ball  <ball@sol.local>
+
+	* Created <solve-express-2016-10-21/> Ant Task.
+
+2016-03-07  Allen D. Ball  <ball@sol.local>
+
+	* Created <solve-riddle-2016-03-04/> Ant Task.
+
+	* src/main/java/ball/riddler538/ant/taskdefs/AbstractSimulationTask.java:
+	Initial writing.
+
+2016-02-21  Allen D. Ball  <ball@sol.local>
+
+	* Created <solve-riddle-2016-02-19/> Ant Task.
+
+2016-02-19  Allen D. Ball  <ball@sol.local>
+
+	* Changed riddle solution name format.
+
