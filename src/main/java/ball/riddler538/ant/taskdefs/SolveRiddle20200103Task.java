@@ -118,16 +118,9 @@ public class SolveRiddle20200103Task extends AbstractTask {
                         .stream()
                         .filter(t -> t.indexOf(key.get(0)) >= 0)
                         .collect(toSet());
-                    boolean hasPangram =
-                        value.stream()
-                        .map(t -> toCharacterSet(t))
-                        .filter(t -> t.size() == 7)
-                        .findAny().isPresent();
 
-                    if (hasPangram) {
-                        solutions.put(key, value);
-                        scores.put(key, score(value));
-                    }
+                    solutions.put(key, value);
+                    scores.put(key, score(value));
                 }
             }
 
