@@ -18,6 +18,14 @@
   </resolver:resolve>
   <import file="${ball:parent:xml}"/>
 
+  <target name="solve-riddle-2020-01-03"
+          description="--> Invokes &lt;solve-riddle-2020-01-03/&gt; task."
+          depends="jar-classes">
+    <taskdef classpathref="build.classpath"
+             resource="ball/riddler538/ant/defaults.properties"/>
+    <solve-riddle-2020-01-03 classpathref="build.classpath"/>
+  </target>
+
   <target name="solve-riddle-2019-06-28"
           description="--> Invokes &lt;solve-riddle-2019-06-28/&gt; task."
           depends="jar-classes">
