@@ -58,7 +58,7 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
  *
  * {@ant.task}
  * <p>
- * The generated solutions:
+ * The solution:
  * </p>
 <pre>
 List:           172820
