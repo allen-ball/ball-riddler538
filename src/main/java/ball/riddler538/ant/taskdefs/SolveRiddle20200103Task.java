@@ -623,9 +623,8 @@ public class SolveRiddle20200103Task extends AbstractTask {
             URI uri = getClass().getResource("enable1.txt").toURI();
             List<String> list =
                 Files.lines(Paths.get(uri))
+                .map(t -> t.split("#", 2)[0].trim())
                 .filter(t -> isNotBlank(t))
-                .map(t -> t.trim())
-                .filter(t -> (! t.startsWith("#")))
                 .map(t -> t.toUpperCase())
                 .collect(toList());
             Set<String> words =
