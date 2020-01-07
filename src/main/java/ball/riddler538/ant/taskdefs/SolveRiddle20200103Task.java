@@ -32,7 +32,10 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
  * to solve a
  * {@link.uri https://fivethirtyeight.com/features/can-you-solve-the-vexing-vexillology/ Riddler Classic}:
  *
- *The New York Times recently launched some new word puzzles, one of which is Spelling Bee. In this game, seven letters are arranged in a honeycomb lattice, with one letter in the center. Here’s the lattice from December 24, 2019:
+ * The New York Times recently launched some new word puzzles, one of which
+ * is Spelling Bee. In this game, seven letters are arranged in a honeycomb
+ * lattice, with one letter in the center. Here’s the lattice from December
+ * 24, 2019:
  *
  * Spelling Bee screenshot, with the required letter G, and the additional
  * letters L, A, P, X, M and E.
