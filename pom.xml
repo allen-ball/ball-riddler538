@@ -13,7 +13,7 @@
     <groupId>ball</groupId>
     <artifactId>parent</artifactId>
     <version>20200102.0</version>
-    <relativePath/>
+    <relativePath>../ball/parent/pom.xml</relativePath>
   </parent>
   <properties>
     <jre.version>1.8</jre.version>
