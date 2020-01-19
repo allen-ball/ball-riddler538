@@ -1,12 +1,11 @@
 /*
  * $Id$
  *
- * Copyright 2016 Allen D. Ball.  All rights reserved.
+ * Copyright 2016 - 2020 Allen D. Ball.  All rights reserved.
  */
 /**
  * Ant Tasks to solve
- * {@link.uri http://fivethirtyeight.com/tag/the-riddler/ “The Riddler”}
- * .
+ * {@link.uri http://fivethirtyeight.com/tag/the-riddler/ “The Riddler”}.
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
  */
