@@ -1,7 +1,7 @@
 /*
  * $Id$
  *
- * Copyright 2016 - 2019 Allen D. Ball.  All rights reserved.
+ * Copyright 2016 - 2020 Allen D. Ball.  All rights reserved.
  */
 package ball.riddler538.ant.taskdefs;
 
@@ -81,7 +81,7 @@ public class SolveRiddle20160304Task extends AbstractSimulationTask {
 
             log(new SimpleTableModel(new Object[][] { }, 3)
                 .row("count:", simulations.size(), EMPTY));
-            log(EMPTY);
+            log();
             log(new MapsTableModel(maps,
                                    "first pick", "total wins",
                                    "on first pick"));

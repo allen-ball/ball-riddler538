@@ -691,7 +691,7 @@ public class SolveRiddle20200103Task extends AbstractTask {
 
             for (List<Character> key : scores.keySet()) {
                 if (scores.get(key).intValue() == maxScore) {
-                    log(EMPTY);
+                    log();
 
                     List<String> solution =
                         solutions.get(key).stream().collect(toList());

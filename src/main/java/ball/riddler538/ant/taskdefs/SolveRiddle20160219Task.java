@@ -1,7 +1,7 @@
 /*
  * $Id$
  *
- * Copyright 2016 - 2019 Allen D. Ball.  All rights reserved.
+ * Copyright 2016 - 2020 Allen D. Ball.  All rights reserved.
  */
 package ball.riddler538.ant.taskdefs;
 
@@ -119,7 +119,7 @@ public class SolveRiddle20160219Task extends AbstractSimulationTask {
                 maps.get(2).put(passenger, cumulative);
             }
 
-            log(EMPTY);
+            log();
             log(new MapsTableModel(maps,
                                    "passenger", "seat#" + seatN + " count",
                                    "%", "cum%"));
