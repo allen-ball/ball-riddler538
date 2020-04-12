@@ -35,6 +35,13 @@
     <version>20200213-SNAPSHOT</version>
     <relativePath>../ball/parent/pom.xml</relativePath>
   </parent>
+  <licenses>
+    <license>
+      <name>Apache-2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <inceptionYear>2015</inceptionYear>
   <properties>
     <jre.version>1.8</jre.version>
