@@ -42,7 +42,7 @@
           description="--> Invokes &lt;solve-riddle-2020-01-03/&gt; task."
           depends="jar-classes">
     <taskdef classpathref="build.classpath"
-             resource="ball/riddler538/ant/defaults.properties"/>
+             resource="ball/riddler538/ant/antlib.xml"/>
     <solve-riddle-2020-01-03 classpathref="build.classpath"/>
   </target>
 
@@ -50,7 +50,7 @@
           description="--> Invokes &lt;solve-riddle-2019-06-28/&gt; task."
           depends="jar-classes">
     <taskdef classpathref="build.classpath"
-             resource="ball/riddler538/ant/defaults.properties"/>
+             resource="ball/riddler538/ant/antlib.xml"/>
     <solve-riddle-2019-06-28 classpathref="build.classpath"/>
   </target>
 
@@ -58,7 +58,7 @@
           description="--> Invokes &lt;solve-express-2017-12-22/&gt; task."
           depends="jar-classes">
     <taskdef classpathref="build.classpath"
-             resource="ball/riddler538/ant/defaults.properties"/>
+             resource="ball/riddler538/ant/antlib.xml"/>
     <solve-express-2017-12-22 classpathref="build.classpath"/>
   </target>
 
@@ -66,7 +66,7 @@
           description="--> Invokes &lt;solve-express-2016-10-21/&gt; task."
           depends="jar-classes">
     <taskdef classpathref="build.classpath"
-             resource="ball/riddler538/ant/defaults.properties"/>
+             resource="ball/riddler538/ant/antlib.xml"/>
     <solve-express-2016-10-21 classpathref="build.classpath"/>
   </target>
 
@@ -74,7 +74,7 @@
           description="--> Invokes &lt;solve-riddle-2016-03-04/&gt; task."
           depends="jar-classes">
     <taskdef classpathref="build.classpath"
-             resource="ball/riddler538/ant/defaults.properties"/>
+             resource="ball/riddler538/ant/antlib.xml"/>
     <solve-riddle-2016-03-04 classpathref="build.classpath"/>
   </target>
 
@@ -82,7 +82,7 @@
           description="--> Invokes &lt;solve-riddle-2016-02-19/&gt; task."
           depends="jar-classes">
     <taskdef classpathref="build.classpath"
-             resource="ball/riddler538/ant/defaults.properties"/>
+             resource="ball/riddler538/ant/antlib.xml"/>
     <solve-riddle-2016-02-19 classpathref="build.classpath"/>
   </target>
 
@@ -90,7 +90,7 @@
           description="--> Invokes &lt;solve-riddle-2015-12-22/&gt; task."
           depends="jar-classes">
     <taskdef classpathref="build.classpath"
-             resource="ball/riddler538/ant/defaults.properties"/>
+             resource="ball/riddler538/ant/antlib.xml"/>
     <solve-riddle-2015-12-22 classpathref="build.classpath" count="${count}"/>
   </target>
 </project>
