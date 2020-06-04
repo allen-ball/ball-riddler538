@@ -124,6 +124,7 @@ public class SolveRiddle20160304Task extends AbstractSimulationTask {
 
     private static final Random RANDOM = new Random();
 
+    @ToString
     private class Simulation {
         private final double[][] p;
 
@@ -142,9 +143,6 @@ public class SolveRiddle20160304Task extends AbstractSimulationTask {
         public int getLoser() { return (getWinner() == 0) ? 1 : 0; }
 
         public double[] getLoserPicks() { return p[getLoser()]; }
-
-        @Override
-        public String toString() { return super.toString(); }
     }
 
     private class BucketMap extends TreeMap<Double,Integer> {

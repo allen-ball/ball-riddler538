@@ -485,13 +485,11 @@ public class SolveRiddle20190628Task extends AbstractTask {
             }
         }
 
+        @ToString
         private class ResourceReader extends BufferedReader {
             public ResourceReader() {
                 super(new InputStreamReader(SolveRiddle20190628Task.class.getResourceAsStream("enable1.txt")));
             }
-
-            @Override
-            public String toString() { return super.toString(); }
         }
     }
 
