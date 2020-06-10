@@ -77,7 +77,10 @@ public class SolveExpress20161021Task extends AbstractTask {
         super.execute();
 
         try {
-            wordlist = (WordList) getClassForName(getList()).newInstance();
+            wordlist =
+                (WordList)
+                getClassForName(getList()).getDeclaredConstructor()
+                .newInstance();
 
             SolutionMap previous = new SolutionMap();
             SolutionMap next = new SolutionMap();
