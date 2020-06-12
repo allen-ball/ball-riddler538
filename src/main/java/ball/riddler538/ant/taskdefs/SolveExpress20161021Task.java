@@ -85,7 +85,7 @@ public class SolveExpress20161021Task extends AbstractTask {
             SolutionMap previous = new SolutionMap();
             SolutionMap next = new SolutionMap();
 
-            wordlist.stream()
+            wordlist.keySet().stream()
                 .filter(t -> t.length() == 2)
                 .forEach(t -> next.add(new Solution(t)));
 
@@ -124,7 +124,7 @@ public class SolveExpress20161021Task extends AbstractTask {
                 map.add(clone().append(tile.toString()));
             }
 
-            map.keySet().retainAll(wordlist);
+            map.keySet().retainAll(wordlist.keySet());
 
             return map.values();
         }
