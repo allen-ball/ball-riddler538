@@ -45,7 +45,7 @@
   </licenses>
   <inceptionYear>2015</inceptionYear>
   <properties>
-    <jse.release>1.8</jse.release>
+    <jse.release>8</jse.release>
   </properties>
   <dependencies verbose="true">
     <dependency>
