@@ -631,7 +631,7 @@ N   G INTENERATING  19
 @AntTask("solve-riddle-2020-01-03")
 @NoArgsConstructor @ToString
 public class SolveRiddle20200103Task extends AbstractTask {
-    private static final Character S = new Character('S');
+    private static final Character S = Character.valueOf('S');
 
     @Override
     public void execute() throws BuildException {
