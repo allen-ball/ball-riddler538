@@ -2,10 +2,8 @@ package ball.riddler538.ant.taskdefs;
 /*-
  * ##########################################################################
  * Solutions for the 538 Riddler
- * $Id$
- * $HeadURL$
  * %%
- * Copyright (C) 2015 - 2021 Allen D. Ball
+ * Copyright (C) 2015 - 2022 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -58,7 +56,6 @@ import static org.apache.commons.lang3.StringUtils.EMPTY;
  * {@ant.task}
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
- * @version $Revision$
  */
 @AntTask("solve-riddle-2016-02-19")
 @NoArgsConstructor @ToString
@@ -99,11 +96,9 @@ public class SolveRiddle20160219Task extends AbstractSimulationTask {
                 .row("seats:", getSeats(), EMPTY)
                 .row("passengers:", getPassengers(), EMPTY)
                 .row("count:", simulations.size(), EMPTY)
-                .row("successes:",
-                     successes, asPercent(successes, simulations.size()) + "%"));
+                .row("successes:", successes, asPercent(successes, simulations.size()) + "%"));
 
-            String[] headers =
-                new String[] { "passenger", "seat#" + seatN + "count", "%", "cum%" };
+            String[] headers = new String[] { "passenger", "seat#" + seatN + "count", "%", "cum%" };
             ArrayList<Map<Integer,Number>> maps = new ArrayList<>();
 
             maps.add(new TreeMap<Integer,Number>());
@@ -117,15 +112,13 @@ public class SolveRiddle20160219Task extends AbstractSimulationTask {
             for (Simulation simulation : simulations) {
                 int passenger = simulation.get(seatN);
 
-                maps.get(0).put(passenger,
-                                maps.get(0).get(passenger).intValue() + 1);
+                maps.get(0).put(passenger, maps.get(0).get(passenger).intValue() + 1);
             }
 
             float cumulative = (float) 0;
 
             for (int passenger : passengers) {
-                float probability =
-                    asPercent(maps.get(0).get(passenger), simulations.size());
+                float probability = asPercent(maps.get(0).get(passenger), simulations.size());
 
                 maps.get(1).put(passenger, probability);
 
@@ -135,9 +128,7 @@ public class SolveRiddle20160219Task extends AbstractSimulationTask {
             }
 
             log();
-            log(new MapsTableModel(maps,
-                                   "passenger", "seat#" + seatN + " count",
-                                   "%", "cum%"));
+            log(new MapsTableModel(maps, "passenger", "seat#" + seatN + " count", "%", "cum%"));
         } catch (BuildException exception) {
             throw exception;
         } catch (Throwable throwable) {

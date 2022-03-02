@@ -1,4 +1,3 @@
-# $Id$
 # https://norvig.com/ngrams/enable1.txt
 aa
 aah

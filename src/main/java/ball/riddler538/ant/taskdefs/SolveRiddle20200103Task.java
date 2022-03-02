@@ -2,10 +2,8 @@ package ball.riddler538.ant.taskdefs;
 /*-
  * ##########################################################################
  * Solutions for the 538 Riddler
- * $Id$
- * $HeadURL$
  * %%
- * Copyright (C) 2015 - 2021 Allen D. Ball
+ * Copyright (C) 2015 - 2022 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -626,7 +624,6 @@ N   G INTENERATING  19
 </pre>
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
- * @version $Revision$
  */
 @AntTask("solve-riddle-2020-01-03")
 @NoArgsConstructor @ToString
@@ -668,16 +665,12 @@ public class SolveRiddle20200103Task extends AbstractTask {
                 map.put(key, value);
             }
 
-            Map<List<Character>,Set<String>> solutions =
-                new TreeMap<>(Comparator.comparing(Object::toString));
-            Map<List<Character>,Integer> scores =
-                new TreeMap<>(Comparator.comparing(Object::toString));
+            Map<List<Character>,Set<String>> solutions = new TreeMap<>(Comparator.comparing(Object::toString));
+            Map<List<Character>,Integer> scores = new TreeMap<>(Comparator.comparing(Object::toString));
 
-            for (Map.Entry<Set<Character>,Set<String>> entry :
-                     map.entrySet()) {
+            for (Map.Entry<Set<Character>,Set<String>> entry : map.entrySet()) {
                 for (int i = 0, n = entry.getKey().size(); i < n; i += 1) {
-                    List<Character> key =
-                        entry.getKey().stream().collect(toList());
+                    List<Character> key = entry.getKey().stream().collect(toList());
 
                     key.add(0, key.remove(i));
 
@@ -708,8 +701,7 @@ public class SolveRiddle20200103Task extends AbstractTask {
                 if (scores.get(key).intValue() == maxScore) {
                     log();
 
-                    List<String> solution =
-                        solutions.get(key).stream().collect(toList());
+                    List<String> solution = solutions.get(key).stream().collect(toList());
 
                     solution.sort(Comparator
                                   .<String>comparingInt(t -> score(t))

@@ -2,10 +2,8 @@ package ball.riddler538.ant.taskdefs;
 /*-
  * ##########################################################################
  * Solutions for the 538 Riddler
- * $Id$
- * $HeadURL$
  * %%
- * Copyright (C) 2015 - 2021 Allen D. Ball
+ * Copyright (C) 2015 - 2022 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -222,13 +220,11 @@ CAR                                                                             
 </pre>
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
- * @version $Revision$
  */
 @AntTask("solve-riddle-2019-06-28")
 @NoArgsConstructor @ToString
 public class SolveRiddle20190628Task extends AbstractTask {
-    private static final Path TMPDIR =
-        Paths.get(System.getProperty("java.io.tmpdir"));
+    private static final Path TMPDIR = Paths.get(System.getProperty("java.io.tmpdir"));
 
     private static final Comparator<CharSequence> COMPARATOR =
         comparing(CharSequence::toString, CASE_INSENSITIVE_ORDER);
@@ -240,8 +236,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
     private final Bag bag = new Bag();
     private final List<Tile> solution = new LinkedList<>();
     private final StringBuilder sequence = new StringBuilder();
-    private final LinkedList<TreeMap<CharSequence,Integer>> score =
-        new LinkedList<>();
+    private final LinkedList<TreeMap<CharSequence,Integer>> score = new LinkedList<>();
 
     @Override
     public void execute() throws BuildException {
@@ -250,8 +245,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
         try {
             while (! bag.isEmpty()) {
                 Optional<CharSequence> next = next();
-                CharSequence subsequence =
-                    next.orElseGet(() -> Tile.toString(bag));
+                CharSequence subsequence = next.orElseGet(() -> Tile.toString(bag));
                 List<Tile> tiles = draw(subsequence, bag);
 
                 play(subsequence, tiles);
@@ -280,8 +274,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
             log(repeat("-", solution.size()));
 
             for (int i = 0, n = score.size(); i < n; i += 1) {
-                LinkedList<CharSequence> keys =
-                    new LinkedList<>(score.get(i).keySet());
+                LinkedList<CharSequence> keys = new LinkedList<>(score.get(i).keySet());
 
                 keys.sort(comparingInt(CharSequence::length).reversed());
 
@@ -290,8 +283,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
 
                     line.append(repeat(SPACE, i));
                     line.append(key);
-                    line.append(repeat(SPACE,
-                                       solution.size() - (i + key.length())));
+                    line.append(repeat(SPACE, solution.size() - (i + key.length())));
                     line.append(SPACE)
                         .append(String.valueOf(score.get(i).get(key)));
 
@@ -316,8 +308,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
         for (int i = 1, j = sequence.length(); i <= j; i += 1) {
             String prefix = sequence.subSequence(i, j).toString();
 
-            starts.subMap(prefix + Character.MIN_VALUE,
-                          prefix + Character.MAX_VALUE)
+            starts.subMap(prefix + Character.MIN_VALUE, prefix + Character.MAX_VALUE)
                 .keySet()
                 .stream()
                 .max(comparingInt(t -> potential(t)))
@@ -451,8 +442,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
                     for (String line : Files.readAllLines(path)) {
                         String[] entry = line.split("=", 2);
 
-                        computeIfAbsent(entry[0],
-                                        k -> Integer.parseInt(entry[1]));
+                        computeIfAbsent(entry[0], k -> Integer.parseInt(entry[1]));
                     }
                 } else {
                     try (BufferedReader reader = new ResourceReader()) {
@@ -475,8 +465,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
                                                            .mapToInt(Tile::getPoints)
                                                            .sum()));
 
-                    Stream<String> stream =
-                        entrySet().stream().map(String::valueOf);
+                    Stream<String> stream = entrySet().stream().map(String::valueOf);
 
                     Files.write(path, (Iterable<String>) stream::iterator);
                 }
@@ -506,8 +495,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
                     for (String line : Files.readAllLines(path)) {
                         String[] entry = line.split("=", 2);
 
-                        computeIfAbsent(entry[0],
-                                        k -> new TreeSet<>(COMPARATOR))
+                        computeIfAbsent(entry[0], k -> new TreeSet<>(COMPARATOR))
                             .addAll(Arrays.asList(entry[1].split(SPACE)));
                     }
                 } else {
@@ -526,8 +514,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
         protected abstract void compute(Set<CharSequence> wordset);
 
         private String format(Map.Entry<CharSequence,SortedSet<CharSequence>> entry) {
-            return (String.valueOf(entry.getKey()) + "="
-                    + entry.getValue().stream().collect(joining(SPACE)));
+            return String.valueOf(entry.getKey()) + "=" + entry.getValue().stream().collect(joining(SPACE));
         }
     }
 
@@ -546,8 +533,7 @@ public class SolveRiddle20190628Task extends AbstractTask {
                         String value = key.toString().substring(i, j);
 
                         if (wordset.contains(value)) {
-                            computeIfAbsent(key,
-                                            k -> new TreeSet<>(COMPARATOR))
+                            computeIfAbsent(key, k -> new TreeSet<>(COMPARATOR))
                                 .add(value);
                         }
                     }

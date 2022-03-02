@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ##########################################################################
-  $Id$
-  $HeadURL$
   %%
-  Copyright (C) 2015 - 2021 Allen D. Ball
+  Copyright (C) 2015 - 2022 Allen D. Ball
   %%
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -28,12 +26,12 @@
   <description></description>
   <groupId>ball</groupId>
   <artifactId>ball-riddler538</artifactId>
-  <version>20210103.0</version>
+  <version>2022.0.0</version>
   <packaging>jar</packaging>
   <parent>
     <groupId>ball</groupId>
     <artifactId>parent</artifactId>
-    <version>20210103.0</version>
+    <version>2022.0.0</version>
     <relativePath>../ball/parent/pom.xml</relativePath>
   </parent>
   <licenses>
@@ -45,7 +43,7 @@
   </licenses>
   <inceptionYear>2015</inceptionYear>
   <properties>
-    <jse.target>8</jse.target>
+    <jse.target>11</jse.target>
   </properties>
   <dependencies verbose="true">
     <dependency>

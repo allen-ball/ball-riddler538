@@ -2,10 +2,8 @@ package ball.riddler538.ant.taskdefs;
 /*-
  * ##########################################################################
  * Solutions for the 538 Riddler
- * $Id$
- * $HeadURL$
  * %%
- * Copyright (C) 2015 - 2021 Allen D. Ball
+ * Copyright (C) 2015 - 2022 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,7 +58,6 @@ import org.apache.tools.ant.BuildException;
  * {@ant.task}
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
- * @version $Revision$
  */
 @AntTask("solve-riddle-2015-12-22")
 @NoArgsConstructor @ToString

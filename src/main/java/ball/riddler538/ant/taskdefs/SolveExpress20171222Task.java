@@ -2,10 +2,8 @@ package ball.riddler538.ant.taskdefs;
 /*-
  * ##########################################################################
  * Solutions for the 538 Riddler
- * $Id$
- * $HeadURL$
  * %%
- * Copyright (C) 2015 - 2021 Allen D. Ball
+ * Copyright (C) 2015 - 2022 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -79,7 +77,6 @@ Remaining     [2-♢, 2-♧]
 </pre>
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
- * @version $Revision$
  */
 @AntTask("solve-express-2017-12-22")
 @NoArgsConstructor @ToString
@@ -89,9 +86,7 @@ public class SolveExpress20171222Task extends AbstractTask {
         super.execute();
 
         try {
-            SimpleTableModel model =
-                new SimpleTableModel(new Object[][] { },
-                                     "Ranking", "Hand");
+            SimpleTableModel model = new SimpleTableModel(new Object[][] { }, "Ranking", "Hand");
             TreeMap<Ranking,List<Card>> map = new TreeMap<>();
             List<Card> deck = new Deck();
 
